@@ -1,0 +1,44 @@
+
+
+<div class  = 'feild'>
+<pre> <b>Set Tags through</b>     <%= radio_button_tag "reply", true, true %>Online    <%= radio_button_tag "reply", true, true %>Offline
+</pre>
+</div>
+<pre>
+<div class="container">     
+     
+      	<%= form_with(model: product_detail, local: true) do |form| %>
+      <div class="field">
+      <%= form.label :productcategory %>
+      <%= form.Select(:productcategory, id: :product_detail_productcategory) %>
+    </div>
+
+  <div class="field">
+    <%= form.label :productgroup %>
+    <%= form.Select( :productgroup, id: :product_detail_productgroup) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :productcode %>
+    <%= form.Select( :productcode, id: :product_detail_productcode) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :productdescription %>
+    <%= form.Select( :productdescription, id: :product_detail_productdescription) %>
+  </div>
+
+  <% end %>
+	 
+     
+</div>
+
+</pre>
+
+  <div align = "Right">
+
+  	 <%= submit_tag("Save & Next") %>
+  </div>
+
+
+

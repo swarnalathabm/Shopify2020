@@ -1,0 +1,43 @@
+<%= form_with(model: product_tag, local: true) do |form| %>
+  <% if product_tag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product_tag.errors.count, "error") %> prohibited this product_tag from being saved:</h2>
+
+      <ul>
+      <% product_tag.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<table border=1>
+<tr>
+  <td>  <%= form.label :Product_Item %></td><td><%= form.text_field :pid, id: :product_tag_pid %></td>
+</tr>
+<tr>
+  <td>
+   <%= form.label :Product_category %></td><td> <%= form.text_field :pcategory, id: :product_tag_pcategory %></td>
+ </tr>
+ <tr>
+  <td><%= form.label :Product_group %>   </td><td> <%= form.text_field :pgroup, id: :product_tag_pgroup %></td>
+</tr>
+<tr> <td><%= form.label :Product_code %> </td><td> <%= form.text_field :pcode, id: :product_tag_pcode %></td>
+</tr>
+<tr>
+      <td><%= form.label :Product_description %> </td><td>  <%= form.text_field :pdescription, id: :product_tag_pdescription %></td>
+    </tr>
+    <tr>
+<td>   <%= form.label :Product_tag %>  </td><td>  <%= form.text_field :ptag, id: :product_tag_ptag %></td>
+</tr>
+  
+<tr>
+  <div class="classrow">
+    
+      
+  </div>
+</tr>
+</table>
+  <div class="actions" align="right">
+    <%= form.submit %>
+  </div>
+<% end %>
